@@ -21,6 +21,10 @@ body {
   color: var(--color-slate);
 }
 
+textarea {
+  resize: none;
+}
+
 .link {
   text-decoration: none;
 }
@@ -153,7 +157,7 @@ body {
 
 .hero {
   background-color: var(--color-navy-blue);
-  text-align: center;
+
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -187,16 +191,19 @@ body {
   color: var(--color-white);
 }
 
-.hero-btn {
-  display: inline-block;
+.hero-btn,
+.form-button {
+  display: block;
   min-width: 169px;
   padding: 16px 32px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 4px;
   border: 1px solid transparent;
 
-  font-family: inherit;
   font-weight: inherit;
   background-color: var(--color-iris);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -206,7 +213,8 @@ body {
   transition: background-color 250ms var(--timing-function);
 }
 
-.hero-btn:is(:hover, :focus) {
+.hero-btn,
+.form-button:is(:hover, :focus) {
   background-color: var(--color-ocean);
 }
 
@@ -225,7 +233,7 @@ body {
   transition: opacity 250ms var(--timing-function);
 }
 
-.is-hidden {
+/* .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -234,12 +242,13 @@ body {
 .is-hidden .modal {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.8);
-}
+} */
 
 .modal {
   position: absolute;
   width: 408px;
-  height: 576px;
+  padding-left: 24px;
+  padding-right: 24px;
   top: 50%;
   left: 50%;
 
@@ -288,6 +297,103 @@ body {
   /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
+}
+
+/* Modal form */
+
+.modal-title {
+  margin-top: 72px;
+  margin-bottom: 16;
+
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--color-navy-blue);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+.modal-form label {
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  color: var(--color-light-slate);
+}
+
+.modal-field {
+  width: 100%;
+  margin-bottom: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 38px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+}
+
+.comment {
+  margin-bottom: 16px;
+  padding-top: 8px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+}
+
+.modal-field::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.checkbox {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.checkbox > label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  margin: 0;
+}
+
+.form-button {
+  margin-bottom: 24px;
+}
+
+.form-field {
+  position: relative;
+}
+
+.icon-form {
+  position: absolute;
+  top: 65%;
+  left: 16px;
+  transform: translateY(-65%);
+}
+
+.modal-field:focus {
+  border: 1px solid var(--color-iris);
+  border-radius: 4px;
+  outline: none;
+}
+
+.modal-field:focus + .icon-form {
+  fill: var(--color-iris);
 }
 
 /* Our advantages */
@@ -622,7 +728,7 @@ body {
 .email-field {
   width: 264px;
   padding-top: 8px;
-  padding-right: 212px;
+
   padding-bottom: 8px;
   padding-left: 16px;
   background-color: var(--color-navy-blue);
@@ -630,6 +736,8 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: var(--color-navy-blue);
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .email-field::placeholder {
@@ -661,6 +769,8 @@ body {
   font-size: 16px;
   letter-spacing: 0.04em;
   color: var(--color-white);
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer-btn:is(:hover, :focus, :active) {
@@ -675,6 +785,8 @@ body {
 
 .footer-form-field:focus-within .email-field {
   background-color: var(--color-white);
+  border: transparent;
+  outline: none;
 }
 
 /* Filter buttons */
