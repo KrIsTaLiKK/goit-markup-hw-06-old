@@ -389,11 +389,22 @@ textarea {
   fill: var(--color-iris);
 }
 
+.link-policy {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33px;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+
+  color: var(--color-iris);
+}
+
 /* Checkbox */
 
 .field-checkbox {
   position: relative;
   display: flex;
+
   align-items: center;
   font-weight: 400;
   font-size: 12px;
@@ -401,6 +412,7 @@ textarea {
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
   margin: 0;
+  padding: 0;
 }
 
 .empty-checkbox {
