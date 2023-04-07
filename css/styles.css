@@ -230,19 +230,19 @@ textarea {
 
   opacity: 1;
 
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
 }
 
-/* .is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
 .is-hidden .modal {
-  opacity: 0;
   transform: translate(-50%, -50%) scale(0.8);
-} */
+}
 
 .modal {
   position: absolute;
@@ -336,8 +336,12 @@ textarea {
   padding-bottom: 8px;
   padding-left: 38px;
 
+  color: var(--color-navy-blue);
+
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+
+  transition: border 250ms var(--timing-function);
 }
 
 .comment {
@@ -357,21 +361,8 @@ textarea {
   color: rgba(46, 47, 66, 0.4);
 }
 
-.checkbox {
-  display: flex;
-  margin-bottom: 24px;
-}
-
-.checkbox > label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
-  margin: 0;
-}
-
 .form-button {
+  margin-top: 24px;
   margin-bottom: 24px;
 }
 
@@ -384,6 +375,8 @@ textarea {
   top: 65%;
   left: 16px;
   transform: translateY(-65%);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .modal-field:focus {
@@ -394,6 +387,47 @@ textarea {
 
 .modal-field:focus + .icon-form {
   fill: var(--color-iris);
+}
+
+/* Checkbox */
+
+.field-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  margin: 0;
+}
+
+.empty-checkbox {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+
+  transition: background-color 250ms var(--timing-function);
+}
+
+.icon-checkbox {
+  position: absolute;
+  color: var(--color-white);
+
+  fill: currentColor;
+
+  transition: color 250ms var(--timing-function);
+}
+
+.checkbox:checked ~ .empty-checkbox {
+  background-color: var(--color-ocean);
+}
+
+.checkbox:checked + .icon-checkbox {
+  fill: var(--color-cloud);
 }
 
 /* Our advantages */
