@@ -73,50 +73,56 @@
                   <use href="./images/symbol-defs.svg#close"></use>
                 </svg>
               </button>
+
               <p class="modal-title">
                 Leave your contacts and we will call you back
               </p>
 
               <form class="modal-form">
                 <div class="form-field">
-                  <label for="name">Name</label>
-
-                  <input
-                    class="modal-field"
-                    type="text"
-                    name="name"
-                    id="name"
-                  />
-                  <svg class="icon-form" width="18" height="24">
-                    <use href="./images/symbol-defs.svg#name"></use>
-                  </svg>
+                  <label class="form-description" for="name">Name</label>
+                  <div class="container-icon">
+                    <input
+                      class="modal-field"
+                      type="text"
+                      name="name"
+                      id="name"
+                    />
+                    <svg class="icon-form" width="18" height="24">
+                      <use href="./images/symbol-defs.svg#name"></use>
+                    </svg>
+                  </div>
                 </div>
                 <div class="form-field">
-                  <label for="phone">Phone</label>
-                  <input
-                    class="modal-field"
-                    type="tel"
-                    name="phone"
-                    id="phone"
-                  />
-                  <svg class="icon-form" width="18" height="24">
-                    <use href="./images/symbol-defs.svg#phone"></use>
-                  </svg>
+                  <label class="form-description" for="phone">Phone</label>
+                  <div class="container-icon">
+                    <input
+                      class="modal-field"
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                    />
+                    <svg class="icon-form" width="18" height="24">
+                      <use href="./images/symbol-defs.svg#phone"></use>
+                    </svg>
+                  </div>
                 </div>
                 <div class="form-field">
-                  <label for="email">Email</label>
-                  <input
-                    class="modal-field"
-                    type="mail"
-                    name="email"
-                    id="email"
-                  />
-                  <svg class="icon-form" width="18" height="24">
-                    <use href="./images/symbol-defs.svg#email"></use>
-                  </svg>
+                  <label class="form-description" for="email">Email</label>
+                  <div class="container-icon">
+                    <input
+                      class="modal-field"
+                      type="email"
+                      name="email"
+                      id="email"
+                    />
+                    <svg class="icon-form" width="18" height="24">
+                      <use href="./images/symbol-defs.svg#email"></use>
+                    </svg>
+                  </div>
                 </div>
-                <div class="form-field">
-                  <label for="comment">Comment</label>
+                <div class="comment-field">
+                  <label class="form-description" for="comment">Comment</label>
                   <textarea
                     class="modal-field comment"
                     name="comment"
@@ -141,8 +147,9 @@
                     <a class="link-policy" href="">Privacy Policy</a></label
                   >
                 </div>
-
-                <button class="form-button" type="submit">Send</button>
+                <div class="container-form-button">
+                  <button class="form-button" type="submit">Send</button>
+                </div>
               </form>
             </div>
           </div>
@@ -658,11 +665,9 @@
             /></label>
             <button class="footer-btn" type="submit">
               Subscribe
-              <div class="button-icon">
-                <svg width="24" height="24">
-                  <use href="./images/symbol-defs.svg#telegram"></use>
-                </svg>
-              </div>
+              <svg class="button-icon" width="24" height="24">
+                <use href="./images/symbol-defs.svg#telegram"></use>
+              </svg>
             </button>
           </form>
         </div>
