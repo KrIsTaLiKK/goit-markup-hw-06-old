@@ -399,6 +399,7 @@ textarea {
 }
 
 .link-policy {
+  margin-left: 4px;
   line-height: 1.33;
   color: var(--color-iris);
 }
@@ -794,7 +795,7 @@ textarea {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
-  align-items: center;
+
   letter-spacing: 0.04em;
   color: var(--color-white);
 }
@@ -811,12 +812,14 @@ textarea {
 
   background-color: var(--color-iris);
   border-radius: 4px;
+  border: none;
   border-color: transparent;
   cursor: pointer;
 
   font-family: inherit;
   font-weight: inherit;
   font-size: 16px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--color-white);
 
